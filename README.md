@@ -1,1 +1,1 @@
-# viral_bioinformatics
+# Bioinformatics tools for viral analysis
