@@ -6,8 +6,6 @@ This tool allows to generate of the kmers of a sequence that is inside the third
 
 
 
-
-
 ## Use
 
 To run this tool run:
@@ -27,7 +25,7 @@ To run this tool run:
   import gkmer
 ```
 
-2. Run this function
+3. Run this function
 ```python
   gkmer.get_kmer_from_csv(CSV_FILE, length_kmer)
 ```
@@ -36,9 +34,9 @@ To run this tool run:
 | `CSV_FILE` |  File with 3 columns separated by `;;;`| `example.csv`|
 | `length_kmer` | Length of the kmer required | `2`,`3`,`4`,...,n|
 
-3. Review the output CSV file with the proportion of each kmer of a sequence.
+4. Review the output CSV file with the proportion of each kmer of a sequence.
 
-| length Kmer|  # Kmer |                 
+| Length Kmer|  Number of kmer generated|                 
 | :-------- | :------- | 
 | 2 | 10 |
 | 3 | 32 | 
@@ -46,10 +44,7 @@ To run this tool run:
 | 5 | 512 | 
 
 
-
 **Note:** The `length_kmer` will depend on the computing power you have available on your computer. 
-
-
 
 
 ## Author
