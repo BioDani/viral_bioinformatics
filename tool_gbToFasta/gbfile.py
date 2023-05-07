@@ -126,7 +126,7 @@ def create_file_from_gbfile(path):
 
     path_csv = path.replace('.gb','.csv')
     with open(path_csv, 'w') as newfile:
-        newfile.write('locus;;;family;;;genus;;;host;;;NucleicAc_type;;;long;;;date;;;country;;;pubmed;;;segment\n')
+        newfile.write('locus;;;family;;;genus;;;host;;;NucleicAc_type;;;long;;;date;;;country;;;pubmed;;;segment;;;seq\n')
         for locus in LOCUS:
             newfile.write(locus+';;;'+family[locus]+';;;'+genus[locus]+';;;'+host[locus]+';;;'+NucleicAc_type[locus]+';;;'+long[locus]+';;;'+date[locus]+';;;'+country[locus]+';;;'+pubmed[locus]+';;;'+segment[locus]+';;;')
             newfile.write(sequences[locus]+'\n')
