@@ -1,4 +1,5 @@
 import itertools
+import re
 
 def reverse(seq):
     return seq[::-1]
@@ -30,13 +31,20 @@ def get_canonical_kmers(k):
             canonical_kmer_list.append(canonical_kmer)
     return canonical_kmer_list
 
+
+def validate_seq(seq):
+    if re.search(r'^[ACGT]+$', seq):
+        return True
+    else:
+        return False
+
 def get_kmer_count(seq,k):
     seq  = seq.upper()
     total = 0 
     counter = { i: 0 for i in get_canonical_kmers(k)}
 
     for i in range(len(seq)):
-        if len(seq[i:i+k]) == k:
+        if len(seq[i:i+k]) == k and validate_seq(seq[i:i+k]):
             total += 1
             temporal = []
             temporal.append(seq[i:i+k])
