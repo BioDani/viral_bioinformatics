@@ -17,11 +17,19 @@ To run this tool run:
   import rc 
 ```
 
-2. Run this function
+2. Run one of these function
+```python
+  rc.reverse(Sequence)
+```
+```python
+  rc.complement(Sequence)
+```
+
 
 ```python
-  rc.generate_reverse_complement(sequence)
+ rc.generate_reverse_complement(Sequence):
 ```
+
 
 __Note:__ Sequence could be a *uppercase* or *lowercase* string.  
 
